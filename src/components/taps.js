@@ -10,6 +10,13 @@ class Taps extends React.Component {
     }
 
     render() {
+        const checkifLow = (taplevel) => {
+            if(taplevel < 500 ){
+                return 'lowstock'
+            } else{
+                return 'highstock'
+            }
+        }
         return(
             <div>
               <h1>Current status of Taps</h1>
@@ -25,12 +32,9 @@ class Taps extends React.Component {
                   </thead>
                   <tbody>
                   {this.props.taps.map(tap => {
-                //    { while(tap.level < 500){
-                //     console.log(`tap ${tap.id} low level`);
-                //     // document.querySelector(`tap${tap.id}level`).classList.add('lowstock');
-                // }}
+                  
             return(
-                <tr  key={tap.id} className={`tap${tap.id}level`}>
+                <tr  key={tap.id} className={checkifLow(tap.level)}>
                     <td>{tap.beer}</td>
                     <td>{tap.id}</td>
                     <td>{tap.capacity}</td> 

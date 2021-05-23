@@ -8,6 +8,13 @@ class Storage extends React.Component {
     }
 }
     render(){
+        const checkifLow = (taplevel) => {
+            if(taplevel <= 2 ){
+                return 'lowstock'
+            } else{
+                return 'highstock'
+            }
+        }
         return(
             <div>
               <h1>Current status of storage</h1>
@@ -21,7 +28,7 @@ class Storage extends React.Component {
                   <tbody>
                   {this.props.storage.map(storage => {
             return(
-                <tr key={storage.name}>
+                <tr key={storage.name} className={checkifLow(storage.amount)}>
                     <td>{storage.name}</td>
                     <td>{storage.amount}</td> 
               </tr>
