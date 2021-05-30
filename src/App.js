@@ -81,7 +81,7 @@ render(){
             <div className="orders-container-main" >
               <div className="orders-serving">
                 <h1>Orders serving</h1>
-                <OrdersServing bartenders={this.state.bartenders} serving={this.state.serving}/>
+                <OrdersServing currenttime={cleanUpTimeStamp(this.state.timestamp)} bartenders={this.state.bartenders} serving={this.state.serving}/>
               </div>
 
               <div className="orders">

@@ -29,6 +29,34 @@
  
 }
 
+.capacity {
+  height: 30px;
+  width: 200px;
+  border: solid 2px black;
+}
+.capacity > .lowstock{
+  height: 100%;
+  width: 23%;
+  background-color: red;
+}
+
+.capacity > .mediumlowstock{
+  height: 100%;
+  width: 33%;
+  background-color: orange;
+}
+
+.capacity > .mediumhighstock{
+  height: 100%;
+  width: 66%;
+  background-color: lightgreen;
+}
+.capacity > .highstock{
+  height: 100%;
+  width: 100%;
+  background-color: green;
+}
+
 .orders-container{
   display: flex;
   border: 1px solid black;
@@ -61,7 +89,7 @@ header{
   justify-content: center;
 }
 
-tr.lowstock{
+.storagestatus tr.lowstock{
   background-color: red;
 }
 

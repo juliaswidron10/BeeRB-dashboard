@@ -35,10 +35,18 @@ class OrderServing extends React.Component {
             return finOrder;
         }
         const cleanUpTimeStamp = (timestamp) =>{
+            // let currentTime = Number(this.props.currenttime);
+            // const now = Number(timestamp);
+            // const unixTimestamp  = currentTime - now;
+            // const dateObject = new Date(unixTimestamp);
+            // const dateToDisplay = unixTimestamp.DateTimeFormat({minute:'numeric'});
+            // const dateToDisplay = dateObject.toLocaleTimeString()
             const unixTimestamp  = timestamp;
             const dateObject = new Date(unixTimestamp);
             const dateToDisplay = dateObject.toLocaleTimeString()
             return dateToDisplay
+        
+            return unixTimestamp 
         
           }
 

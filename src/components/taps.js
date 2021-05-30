@@ -13,7 +13,11 @@ class Taps extends React.Component {
         const checkifLow = (taplevel) => {
             if(taplevel < 500 ){
                 return 'lowstock'
-            } else{
+            }else if(taplevel > 500 && taplevel < 1250){
+                return 'mediumlowstock'
+            } else if(taplevel > 1250 && taplevel < 1750){
+                return 'mediumhighstock'
+            }else{
                 return 'highstock'
             }
         }
@@ -38,7 +42,7 @@ class Taps extends React.Component {
                     <td>{tap.beer}</td>
                     <td>{tap.id}</td>
                     <td>{tap.capacity}</td> 
-                    <td>{tap.level}</td>
+                    <td><div className="capacity"><div className={checkifLow(tap.level)} >{tap.level}</div> </div></td>
                     <td>{tap.inUse ? 'yes' : 'no'}</td>
               </tr>
             )
