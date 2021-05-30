@@ -44,11 +44,11 @@ class Order extends React.Component {
           }
 
         return(
-            <div>
+            <div div className="queue-component">
                 <h1> {this.props.id} </h1>
-                <h2> Order placed </h2> 
-                <p> {cleanUpTimeStamp(this.props.startTime) } </p> 
-                <h2> Items ordered </h2>
+{/*                 <h2> Order placed </h2> 
+                <p> {cleanUpTimeStamp(this.props.startTime) } </p>  */}
+                {/* <h2> Items ordered </h2> */}
                 <ul className="listOrder" >
                     {finOrder.map( order => {
                         return(

@@ -86,7 +86,7 @@ render(){
                 <OrdersServing currenttime={cleanUpTimeStamp(this.state.timestamp)} bartenders={this.state.bartenders} serving={this.state.serving}/>
               </div>
 
-              <div className="orders">
+              <div className="orders-queue">
                 <h1>Orders in the queue</h1>
                 <Orders orders={this.state.queue}/>
               </div>

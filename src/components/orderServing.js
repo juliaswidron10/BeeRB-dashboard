@@ -56,19 +56,20 @@ class OrderServing extends React.Component {
 
         return(
             <div className="serving-component">
-                <h2>{this.props.id}</h2>
-                <h2>Order Placed</h2>
-                <p>{cleanUpTimeStamp(this.props.startTime) }</p>
-                <h2>Ordered Items</h2>
+                <h1>{this.props.id}</h1>
+                {/* <h2>Ordered Items</h2> */}
                 <ul className="listOrder" >
                     {finOrder.map( order => {
                         return(
                             <li>{ order }</li>
                         )
                     })
-
                     }
                 </ul>
+                <div className="order-duration">
+                     <p><span>Order placed at: </span>{cleanUpTimeStamp(this.props.startTime) }</p>
+                </div>
+
             </div>
         )
     }

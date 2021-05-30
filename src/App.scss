@@ -15,23 +15,30 @@
 //   display: flex;
 //   flex-direction: column;
 // }
-.bartenders,
+
+/* .bartenders,
 .orders-serving {
   padding: 1rem;
   background-color: lightgrey;
   margin: 1rem;
-}
-.bartenders-component,
-.orderServing-component {
+} */
+
+.bartenders-component {
   display: flex;
   justify-content: space-between;
 }
-.bartenders-component > div,
+
+/* .orderServing-component {
+  display: flex;
+  justify-content: space-between;
+} */
+
+/* .bartenders-component > div,
 .orderServing-component > div {
   background-color: white;
   padding: 1rem;
   margin: 1rem;
-}
+} */
 .bartenders-component > h2 {
   margin: 0;
 }
@@ -64,7 +71,7 @@
   background-color: green;
 }
 
-.orders-container {
+/* .orders-container {
   display: flex;
   border: 1px solid black;
   flex-wrap: wrap;
@@ -73,7 +80,7 @@
   background-color: lightblue;
   padding: 1rem;
   margin: 1rem;
-}
+} */
 /* header {
   display: flex;
   justify-content: space-around;
