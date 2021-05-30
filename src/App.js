@@ -58,8 +58,10 @@ render(){
     <Router>
      <div className="App">
       <header>
-        <h1>BeeRB</h1>
-        <p className="timenow">{cleanUpTimeStamp(this.state.timestamp) }</p>
+        <div className="header-wrapper">
+          <h1>FooBar</h1>
+          <p className="timenow">{cleanUpTimeStamp(this.state.timestamp) }</p>
+        </div>
         <nav>
           <ul>
             <li>
@@ -80,12 +82,12 @@ render(){
           <Route path="/orders">
             <div className="orders-container-main" >
               <div className="orders-serving">
-                <h1>Orders serving</h1>
+                <h1>Orders being served</h1>
                 <OrdersServing currenttime={cleanUpTimeStamp(this.state.timestamp)} bartenders={this.state.bartenders} serving={this.state.serving}/>
               </div>
 
               <div className="orders">
-                <h1>Queue</h1>
+                <h1>Orders in the queue</h1>
                 <Orders orders={this.state.queue}/>
               </div>
             </div>
