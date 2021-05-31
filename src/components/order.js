@@ -45,7 +45,9 @@ class Order extends React.Component {
 
         return(
             <div div className="queue-component">
-                <h1> {this.props.id} </h1>
+                <div className="heading-container">
+                    <h1> {this.props.id} </h1>
+                </div>
 {/*                 <h2> Order placed </h2> 
                 <p> {cleanUpTimeStamp(this.props.startTime) } </p>  */}
                 {/* <h2> Items ordered </h2> */}

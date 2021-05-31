@@ -56,7 +56,9 @@ class OrderServing extends React.Component {
 
         return(
             <div className="serving-component">
-                <h1>{this.props.id}</h1>
+                <div className="heading-container">
+                    <h1>{this.props.id}</h1>
+                </div>
                 {/* <h2>Ordered Items</h2> */}
                 <ul className="listOrder" >
                     {finOrder.map( order => {
@@ -66,7 +68,7 @@ class OrderServing extends React.Component {
                     })
                     }
                 </ul>
-                <div className="order-duration">
+                <div className="ordertime-container">
                      <p><span>Order placed at: </span>{cleanUpTimeStamp(this.props.startTime) }</p>
                 </div>
 
