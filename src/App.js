@@ -102,11 +102,11 @@ render(){
 
           <Route path="/inventory">
             <div className="inventory-container">
+            <div className="tapssituatuion"> 
+                <Taps taps={this.state.taps}/>
+              </div>
               <div className="storagesituation">
                 <Storage storage={this.state.storage} />
-              </div>
-              <div className="tapssituatuion"> 
-                <Taps taps={this.state.taps}/>
               </div>
             </div>
           </Route>
