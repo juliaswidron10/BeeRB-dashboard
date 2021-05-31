@@ -20,11 +20,15 @@ div.bartenders-container {
 }
 
 .bartenders-component > div {
-  margin: 0.5rem 3rem;
+  margin: 0.5rem 1rem;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
   justify-content: space-between;
+  background-color: $light-grey;
+  padding: 2rem;
+  //max-width: 6rem;
+  min-width: 6rem;
   /* display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -32,9 +36,10 @@ div.bartenders-container {
 }
 
 .bartenders-headings {
-  margin: 0.5rem 3rem;
+  margin: 0.5rem 1rem;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  padding: 2rem 0rem 2rem 1rem;
 }
 
 .bartenders {
