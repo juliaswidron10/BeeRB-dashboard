@@ -19,11 +19,11 @@ class Storage extends React.Component {
             <div>
               <h1>Kegs storage</h1>
               <table className="storagestatus">
-              <div className="tableheading">
+              <div className="storagestatus-heading">
                  <thead>
                  <tr>
                       <th>Beer name</th>
-                      <th>Amount</th>
+                      <th>Keg Amount</th>
                   </tr>
                   </thead>
                 </div>
@@ -31,9 +31,11 @@ class Storage extends React.Component {
                   {this.props.storage.map(storage => {
             return(
                 <tr key={storage.name} className={checkifLow(storage.amount)}>
-                    <div className="tablecontent">
-                    <td>{storage.name}</td>
-                    <td>{storage.amount}</td>
+                    <div className="storagestatus-content">
+                        <td>{storage.name}</td>
+                        <div className="amount-circle">
+                            <td>{storage.amount}</td>
+                        </div>
                     </div>
               </tr>
             )

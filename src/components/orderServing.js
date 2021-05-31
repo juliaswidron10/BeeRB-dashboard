@@ -26,7 +26,7 @@ class OrderServing extends React.Component {
                 }
             }  
             for (let prop in counts){
-                let orderItem = `${prop} ${counts[prop]}`;
+                let orderItem = `${prop} x${counts[prop]}`;
                 console.log(orderItem)
                 finOrder.push(orderItem)
                 console.log(finOrder);

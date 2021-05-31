@@ -25,14 +25,14 @@ class Taps extends React.Component {
             <div>
               <h1>Taps status</h1>
               <table className="tapsstatus">
-                  <div className="tableheading">
+                  <div className="tapstatus-heading">
                   <thead>
                   <tr>
                       <th>Beer name</th>
-                      <th>Tap Number</th>
+                      <th>Tap number</th>
                       <th>In use</th>
-                      <th>Capacity</th>
-                      <th>Level</th>
+                      {/* <th>Capacity</th> */}
+                      <th>Tap level</th>
                       
                   </tr>
                   </thead>
@@ -42,12 +42,12 @@ class Taps extends React.Component {
                   
             return(
                 <tr  key={tap.id} className={checkifLow(tap.level)}>
-                    <div className="tablecontent">
+                    <div className="tapsstatus-content">
                         <td>{tap.beer}</td>
                         <td>{tap.id}</td>
                         <td>{tap.inUse ? 'yes' : 'no'}</td>
-                        <td>{tap.capacity}</td> 
-                        <td><div className="capacity"><div className={checkifLow(tap.level)} >{tap.level}</div> </div></td>
+                        {/* <td>{tap.capacity}</td>  */}
+                        <td><div className="capacity"><div className={checkifLow(tap.level)} >{tap.level}/2500</div> </div></td>
                     </div>
               </tr>
             )

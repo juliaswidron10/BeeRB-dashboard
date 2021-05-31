@@ -33,23 +33,9 @@
   }
 }
 
-.tapssituation,
-.storagesituation {
-  .tableheading {
-    border-top: solid 2px #011626;
-    border-bottom: solid 2px #011626;
-    margin-bottom: 1.5rem;
-  }
-
-  .tablecontent {
-    display: flex;
-    flex-direction: row;
-    text-align: start;
-  }
-
-  .tablecontent td {
-    padding: 0.5rem 6rem 0.5rem 0rem;
-  }
+div.tapsstatus-content:first-child {
+  align-self: flex-start;
+  padding: 0;
 }
 
 /* .tablecontent:first-child {
@@ -57,14 +43,21 @@
 } */
 
 .inventory-container th {
-  padding: 0.3rem 1.5rem;
+  padding: 0rem 2rem;
+  //padding: 15px;
+  //text-align: center;
 }
 
 .inventory-container td {
   display: flex;
   /*   flex-direction: row;
   justify-content: flex-end; */
-  padding: 0.3rem 1.5rem;
+  //padding: 0.3rem 1.5rem;
+  padding: 0.5rem 0;
+  //text-align: left;
+  //background-color: $light-grey;
+  margin-bottom: 0.5rem;
+  align-self: center;
 }
 
 .tapssituation {
@@ -74,6 +67,103 @@
 
 .storagesituation {
   padding-left: 1.5rem;
+}
+
+.tapssituation {
+  .tapstatus-heading {
+    border-top: solid 2px #011626;
+    border-bottom: solid 2px #011626;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* .tapstatus-heading {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.3rem 4rem;
+  th {
+    text-align: center;
+  }
+} */
+
+.tapstatus-heading {
+  justify-content: center;
+  tr {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0.2rem 6rem; */
+    //padding: 0.3rem 4rem;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  /*   thead {
+    justify-content: center;
+  } */
+}
+
+.tapsstatus-content {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+/* .tapstatus-heading > th {
+  justify-self: stretch;
+}
+ */
+.tapsstatus-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  td {
+    justify-content: center;
+  }
+}
+
+/* div.tapsstatus-content:first-child {
+  padding-left: 0.5rem;
+}
+*/
+
+.storagestatus-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  td {
+    justify-content: center;
+  }
+}
+
+.amount-circle {
+  border-radius: 50%;
+  border: solid 2px #011626;
+  width: 1.8rem;
+  height: 1.8rem;
+  //background-color: red;
+  /*  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%; */
+  z-index: 100;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  td {
+    padding: 0.5rem;
+  }
+}
+
+.storagesituation {
+  .storagestatus-heading {
+    border-top: solid 2px #011626;
+    border-bottom: solid 2px #011626;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.storagestatus-heading > tr {
+  /*   display: flex;
+  justify-content: space-around; */
+  padding-left: 2rem;
+  //padding-right: 2rem;
 }
 
 /* .inventory-container > div {
@@ -89,10 +179,26 @@
 }
 */
 
+/* .tablecontent {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+} */
+
+/* .tapsstatus-content > td{
+  .capacity {
+
+  }
+}
+ */
 .capacity {
-  height: 20px;
-  width: 100px;
+  /* height: 20px;
+  width: 100px; */
+  height: 1.8rem;
+  width: 9rem;
   border: solid 2px black;
+  font-size: 0.7rem;
+  align-items: center;
 }
 .capacity > .lowstock {
   height: 100%;
@@ -117,6 +223,10 @@
   background-color: $green;
 }
 
-.storagestatus tr.lowstock {
+.storagestatus tr.lowstock .amount-circle {
   background-color: $red;
+}
+
+.storagestatus tr.highstock .amount-circle {
+  background-color: $green;
 }
