@@ -95,8 +95,19 @@ render(){
 
           <Route path="/bartenders">
           <div className="bartenders">
-                <h1>Bartenders working today</h1>
-                <Bartenders bartenders={this.state.bartenders} />
+                <h1>Bartenders current situation</h1>
+                <div className="bartenders-container">
+                  <div className="bartenders-headings">
+                  <h2>Bartender name</h2>
+                    <h2>Status</h2>
+                    <h2>Status detail</h2>
+                    <h2>Serving customer</h2>
+                    <h2>Using tap</h2>
+                  </div>
+                  <div className="bartenders-content">
+                    <Bartenders bartenders={this.state.bartenders} />
+                  </div>
+                </div>
               </div>
           </Route>
 

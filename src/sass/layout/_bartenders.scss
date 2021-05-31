@@ -1,1 +1,56 @@
 @use "../base/vars" as *;
+div.bartenders-container {
+  display: flex;
+  flex-direction: row;
+  //align-content: flex-end;
+}
+
+.bartenders-component {
+  justify-content: center;
+  h1 {
+    font-family: "Dela-Gothic-One-Regular", sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-family: "Courier-Prime-Regular";
+    font-size: 1rem;
+  }
+}
+
+.bartenders-component > div {
+  margin: 0.5rem 3rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  justify-content: space-between;
+  /* display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 10px; */
+}
+
+.bartenders-headings {
+  margin: 0.5rem 3rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.bartenders {
+  /*   h1 {
+    font-family: "Courier-Prime-Regular";
+    font-size: 1.5rem;
+  } */
+  margin: 1.5rem;
+  h2 {
+    font-family: "Courier-Prime-Regular";
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+}
+
+div.bartenders > h1:first-child {
+  font-family: "Courier-Prime-Regular";
+  font-size: 1.5rem;
+}

@@ -14,22 +14,18 @@ class Bartender extends React.Component {
     render(){
         return(
             <div>
-                <h1>{this.props.name}</h1>
-                <div>
-                    <h2>Serving Customer</h2>
-                    <p>{this.props.servingCustomer}</p>
-
-                    <h2>Status</h2>
+                    <p>{this.props.name}</p>
+                    {/* <h2>Status</h2> */}
                     <p>{this.props.status}</p>
 
-                    <h2>Status Details</h2>
+                    {/* <h2>Status Detail</h2> */}
                     <p>{this.props.statusDetail}</p>
 
-
-                    <h2>Using Tab</h2>
+                    {/* <h2>Using Tap</h2> */}
                     <p>{this.props.usingTap}</p>
-               </div> 
-        
+
+                    {/* <h2>Serving Customer</h2> */}
+                    <p>{this.props.servingCustomer}</p>
             </div>
         )
     }
