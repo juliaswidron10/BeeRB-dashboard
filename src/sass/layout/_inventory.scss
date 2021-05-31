@@ -1,1 +1,122 @@
 @use "../base/vars" as *;
+
+/* .inventory-container {
+  padding: 0.2rem 0rem;
+  margin: 1.5rem;
+  border-top: solid 2px #011626;
+}
+ */
+
+.inventory-container {
+  display: flex;
+  //justify-content: space-between;
+  //padding: 0.2rem 0rem;
+  //padding-left: 1rem;
+  margin: 1.5rem;
+  border-top: solid 2px #011626;
+
+  h1 {
+    font-family: "Courier-Prime-Regular";
+    font-size: 1.5rem;
+  }
+
+  th {
+    font-family: "Courier-Prime-Regular";
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  td {
+    font-family: "Courier-Prime-Regular";
+    font-size: 0.9rem;
+  }
+}
+
+.tapssituation,
+.storagesituation {
+  .tableheading {
+    border-top: solid 2px #011626;
+    border-bottom: solid 2px #011626;
+    margin-bottom: 1.5rem;
+  }
+
+  .tablecontent {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+  }
+
+  .tablecontent td {
+    padding: 0.5rem 6rem 0.5rem 0rem;
+  }
+}
+
+/* .tablecontent:first-child {
+  padding-right: 4rem;
+} */
+
+.inventory-container th {
+  padding: 0.3rem 1.5rem;
+}
+
+.inventory-container td {
+  display: flex;
+  /*   flex-direction: row;
+  justify-content: flex-end; */
+  padding: 0.3rem 1.5rem;
+}
+
+.tapssituation {
+  border-right: solid 2px #011626;
+  padding-right: 1.5rem;
+}
+
+.storagesituation {
+  padding-left: 1.5rem;
+}
+
+/* .inventory-container > div {
+  padding: 1rem;
+  margin: 1rem auto;
+  display: grid;
+  //background-color: lightcyan;
+}
+
+.inventory-container > div table {
+  margin: 1rem auto;
+  justify-content: center;
+}
+*/
+
+.capacity {
+  height: 20px;
+  width: 100px;
+  border: solid 2px black;
+}
+.capacity > .lowstock {
+  height: 100%;
+  width: 23%;
+  background-color: $red;
+}
+
+.capacity > .mediumlowstock {
+  height: 100%;
+  width: 33%;
+  background-color: $orange;
+}
+
+.capacity > .mediumhighstock {
+  height: 100%;
+  width: 66%;
+  background-color: lightgreen;
+}
+.capacity > .highstock {
+  height: 100%;
+  width: 100%;
+  background-color: $green;
+}
+
+.storagestatus tr.lowstock {
+  background-color: $red;
+}

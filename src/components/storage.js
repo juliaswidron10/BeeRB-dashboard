@@ -17,20 +17,24 @@ class Storage extends React.Component {
         }
         return(
             <div>
-              <h1>Current status of storage</h1>
+              <h1>Kegs storage</h1>
               <table className="storagestatus">
+              <div className="tableheading">
                  <thead>
                  <tr>
-                      <th>Name of the beer</th>
-                      <th>storage</th>
+                      <th>Beer name</th>
+                      <th>Amount</th>
                   </tr>
                   </thead>
+                </div>
                   <tbody>
                   {this.props.storage.map(storage => {
             return(
                 <tr key={storage.name} className={checkifLow(storage.amount)}>
+                    <div className="tablecontent">
                     <td>{storage.name}</td>
-                    <td>{storage.amount}</td> 
+                    <td>{storage.amount}</td>
+                    </div>
               </tr>
             )
            
