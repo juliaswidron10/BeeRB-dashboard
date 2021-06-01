@@ -1,11 +1,23 @@
 @use "../base/vars" as *;
+/* 
+.bartenders-component {
+  
+} */
+
+/* .bartenders-component > h2 {
+  margin: 0;
+} */
+
 div.bartenders-container {
   display: flex;
   flex-direction: row;
   //align-content: flex-end;
+  margin-top: 2rem;
 }
 
 .bartenders-component {
+  display: flex;
+  //justify-content: space-between;
   justify-content: center;
   h1 {
     font-family: "Dela-Gothic-One-Regular", sans-serif;
@@ -16,44 +28,55 @@ div.bartenders-container {
   p {
     font-family: "Courier-Prime-Regular";
     font-size: 1rem;
+    padding: 0.15rem;
+    //border-bottom: solid 2px #011626;
+  }
+  .border {
+    border: solid 1px #011626;
+    height: 0;
+    width: 220px;
+    margin: 0;
+    padding: 0;
   }
 }
 
 .bartenders-component > div {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0fr 1fr 0fr 1fr 0fr 1fr 0fr 1fr 0fr;
   justify-items: center;
-  justify-content: space-between;
+  //justify-content: space-between;
   background-color: $light-grey;
-  //margin: 0.5rem 1rem;
-  //padding: 2rem;
-  //min-width: 6rem;
-  padding: 20px 50px;
+  min-width: 220px;
+  margin-left: 20px;
+  padding-top: 1rem;
+
+  /*   padding: 20px 50px;
   margin: 10px;
-  //padding: 2rem;
-  max-width: 100px;
+  max-width: 100px; */
 
-  /*   max-width: 500px;
-  margin: auto; */
-
-  //max-width: 6rem;
-  /* display: grid;
-  justify-content: space-between;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-gap: 10px; */
-
-  p:first-child {
+  /*   p:first-child {
     font-weight: bolder;
-  }
+  } */
 }
+
+/* .bartender-name,
+.bartender-status,
+.bartender-detail,
+.bartender-customer,
+.bartender-tap {
+  border-bottom: solid 2px #011626;
+  //padding: 0px 100px;
+  //padding: 0 4rem;
+} */
 
 .bartenders-headings {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   // padding: 2rem 0rem 2rem 1rem;
   // margin: 0.5rem 1rem;
-  margin: 10px;
-  padding: 20px 50px;
+  margin: 10px 0;
+  //padding: 20px 50px;
+  padding: 65.5px 0 10px 0;
 }
 
 .bartenders {
@@ -62,10 +85,17 @@ div.bartenders-container {
     font-size: 1.5rem;
   } */
   margin: 1.5rem;
+  border-top: solid 2px #011626;
   h2 {
     font-family: "Courier-Prime-Regular";
     font-size: 1.1rem;
     text-transform: uppercase;
+    margin: 0;
+    border-bottom: solid 2px #011626;
+    padding: 1rem;
+  }
+  h2:first-child {
+    border-top: solid 2px #011626;
   }
 }
 
