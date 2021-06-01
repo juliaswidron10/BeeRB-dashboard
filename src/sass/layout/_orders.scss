@@ -15,11 +15,14 @@
 
 .serving-component,
 .queue-component {
+  min-width: 200px;
+  min-height: 200px;
   h1 {
     font-family: "Dela-Gothic-One-Regular", sans-serif;
     font-size: 1rem;
     margin-top: 0;
-    padding: 0.3rem 0rem 0.2rem 0.3rem; //top right bottom left
+    text-align: center;
+    //padding: 0.3rem 0rem 0.2rem 0.3rem; //top right bottom left
   }
 
   h2 {
@@ -97,9 +100,10 @@
 .orders-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
+  gap: 1rem;
+  justify-content: flex-start;
+  //padding: 0;
+  //margin: 0;
 }
 
 /* .serving-component:last-child {

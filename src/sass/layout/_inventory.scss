@@ -56,7 +56,7 @@ div.tapsstatus-content:first-child {
   padding: 0.5rem 0;
   //text-align: left;
   //background-color: $light-grey;
-  margin-bottom: 0.5rem;
+  //margin-bottom: 0.5rem;
   align-self: center;
 }
 
@@ -103,18 +103,20 @@ div.tapsstatus-content:first-child {
   } */
 }
 
-.tapsstatus-content {
-  margin-right: 1rem;
-  margin-left: 1rem;
-}
+/* .tapsstatus-content {
+  
+} */
 
 /* .tapstatus-heading > th {
   justify-self: stretch;
 }
  */
 .tapsstatus-content {
+  background-color: $light-grey;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  margin-bottom: 0.5rem;
+  //margin-left: 1rem;
   td {
     justify-content: center;
   }
@@ -126,9 +128,10 @@ div.tapsstatus-content:first-child {
 */
 
 .storagestatus-content {
+  background-color: $light-grey;
   display: grid;
   grid-template-columns: 2fr 1fr;
-
+  margin-bottom: 0.4rem;
   td {
     justify-content: center;
   }
