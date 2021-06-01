@@ -101,7 +101,7 @@ render(){
                   <h2>Bartender name</h2>
                     <h2>Status</h2>
                     <h2>Status detail</h2>
-                    <h2>Serving customer</h2>
+                    <h2>Serving order</h2>
                     <h2>Using tap</h2>
                   </div>
                   <div className="bartenders-content">
