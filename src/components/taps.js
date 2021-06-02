@@ -10,6 +10,7 @@ class Taps extends React.Component {
     }
 
     render() {
+        // Adding classes to differ styles depending on stock level
         const checkifLow = (taplevel) => {
             if(taplevel < 500 ){
                 return 'lowstock'
@@ -63,9 +64,4 @@ class Taps extends React.Component {
 
 }
 
-// let storage;
-
-
-
-  
 export default Taps;

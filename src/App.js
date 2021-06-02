@@ -37,10 +37,7 @@ class App extends React.Component {
   
   
   const handleData = (data) => {
-    // console.log(data);
-    // let orders = data.queue;
     this.setState(data);
-    // console.log(orders)
   }
   
 }
@@ -54,7 +51,7 @@ render(){
 
   }
   return (
-
+    //code for Router to create navigation
     <Router>
      <div className="App">
       <header>
@@ -139,26 +136,6 @@ render(){
 }
   
 }
-
-
-// let tabsToday = {
-//   taps: [],
-//   storage: [],
-// }
-
-// let ordersToday = {
-//   bartenders: [],
-//   orders: [],
-//   serving: [],
-// }
-
-// let order = {
-//   time: '',
-//   orderitems: [],
-//   id: '',
-// }
-
-
 
 export default App;
 

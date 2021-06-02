@@ -14,7 +14,6 @@ class Order extends React.Component {
         const cleanUpOrders = (order) => {
             
             finOrder = [];
-            console.log(order);
             const a = order;
             let counts = {}
 
@@ -25,11 +24,10 @@ class Order extends React.Component {
                     counts[a[i]] = 1
                 }
             }  
+            //create order items and add them to final Order array that will be displayed
             for (let prop in counts){
                 let orderItem = `${prop} x${counts[prop]}`;
-                console.log(orderItem)
                 finOrder.push(orderItem)
-                console.log(finOrder);
                 }
             
             return finOrder;
@@ -47,9 +45,6 @@ class Order extends React.Component {
                 <div className="heading-container">
                     <h1> {this.props.id} </h1>
                 </div>
-{/*                 <h2> Order placed </h2> 
-                <p> {cleanUpTimeStamp(this.props.startTime) } </p>  */}
-                {/* <h2> Items ordered </h2> */}
                 <ul className="listOrder" >
                     {finOrder.map( order => {
                         return(

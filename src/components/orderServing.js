@@ -13,9 +13,7 @@ class OrderServing extends React.Component {
     render() {
         
         const cleanUpOrders = (order) => {
-            
             finOrder = [];
-            console.log(order);
             const a = order;
             let counts = {}
 
@@ -26,22 +24,15 @@ class OrderServing extends React.Component {
                     counts[a[i]] = 1
                 }
             }  
+            //create final order item to display it in a nice way
             for (let prop in counts){
                 let orderItem = `${prop} x${counts[prop]}`;
-                console.log(orderItem)
                 finOrder.push(orderItem)
-                console.log(finOrder);
                 }
             
             return finOrder;
         }
         const cleanUpTimeStamp = (timestamp) =>{
-            // let currentTime = Number(this.props.currenttime);
-            // const now = Number(timestamp);
-            // const unixTimestamp  = currentTime - now;
-            // const dateObject = new Date(unixTimestamp);
-            // const dateToDisplay = unixTimestamp.DateTimeFormat({minute:'numeric'});
-            // const dateToDisplay = dateObject.toLocaleTimeString()
             const unixTimestamp  = timestamp;
             const dateObject = new Date(unixTimestamp);
             const dateToDisplay = dateObject.toLocaleTimeString()
@@ -58,11 +49,10 @@ class OrderServing extends React.Component {
                 <div className="heading-container">
                     <h1>{this.props.id}</h1>
                 </div>
-                {/* <h2>Ordered Items</h2> */}
                 <ul className="listOrder" >
                     {finOrder.map( order => {
                         return(
-                            <li>{ order }</li>
+                            <li key={order}>{ order }</li>
                         )
                     })
                     }
