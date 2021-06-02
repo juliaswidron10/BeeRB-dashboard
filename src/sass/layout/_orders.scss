@@ -14,8 +14,8 @@
 
 .serving-component,
 .queue-component {
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 210px;
+  min-height: 210px;
   h1 {
     font-family: "Dela-Gothic-One-Regular", sans-serif;
     font-size: 1rem;
@@ -65,15 +65,22 @@
   }
 }
 
+.serving-component {
+  position: relative;
+}
+
 .ordertime-container {
+  min-width: 210px;
   display: flex;
+  position: absolute;
+  bottom: 0px;
   background-color: $light-grey;
-  align-self: flex-end;
   padding: 0rem;
 
   p {
-    padding: 0.5rem;
+    padding: 0 0.5rem;
     font-size: 0.8rem;
+    text-align: center;
   }
 }
 
