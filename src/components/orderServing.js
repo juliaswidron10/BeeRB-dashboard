@@ -46,10 +46,8 @@ class OrderServing extends React.Component {
             const dateToDisplay = dateObject.toLocaleTimeString()
             return dateToDisplay
         
-            return unixTimestamp 
-        
           }
-
+          
         cleanUpOrders(this.props.order);
 
 
