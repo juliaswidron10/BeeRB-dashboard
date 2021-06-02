@@ -35,14 +35,13 @@ class Order extends React.Component {
             return finOrder;
         }
         cleanUpOrders(this.props.order);
-        const cleanUpTimeStamp = (timestamp) =>{
-            const unixTimestamp  = timestamp;
-            const dateObject = new Date(unixTimestamp);
-            const dateToDisplay = dateObject.toLocaleTimeString()
-            return dateToDisplay
+        // const cleanUpTimeStamp = (timestamp) =>{
+        //     const unixTimestamp  = timestamp;
+        //     const dateObject = new Date(unixTimestamp);
+        //     const dateToDisplay = dateObject.toLocaleTimeString()
+        //     return dateToDisplay
         
-          }
-
+        //   }
         return(
             <div div className="queue-component">
                 <div className="heading-container">
