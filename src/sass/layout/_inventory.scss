@@ -230,6 +230,14 @@ div.tapsstatus-content:first-child {
   background-color: $red;
 }
 
+.storagestatus tr.mediumlowstock .amount-circle {
+  background-color: $orange;
+}
+
+.storagestatus tr.mediumhighstock .amount-circle {
+  background-color: lightgreen;
+}
+
 .storagestatus tr.highstock .amount-circle {
   background-color: $green;
 }

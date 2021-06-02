@@ -8,13 +8,26 @@ class Storage extends React.Component {
     }
 }
     render(){
-        const checkifLow = (taplevel) => {
+/*         const checkifLow = (taplevel) => {
             if(taplevel <= 2 ){
                 return 'lowstock'
             } else{
                 return 'highstock'
             }
+        } */
+
+        const checkifLow = (taplevel) => {
+            if(taplevel < 3 ){
+                return 'lowstock'
+            }else if(taplevel > 3 && taplevel < 5){
+                return 'mediumlowstock'
+            } else if(taplevel > 5 && taplevel < 8){
+                return 'mediumhighstock'
+            }else{
+                return 'highstock'
+            }
         }
+
         return(
             <div>
               <h1>Kegs storage</h1>

@@ -47,7 +47,8 @@ class Taps extends React.Component {
                         <td>{tap.id}</td>
                         <td>{tap.inUse ? 'yes' : 'no'}</td>
                         {/* <td>{tap.capacity}</td>  */}
-                        <td><div className="capacity"><div className={checkifLow(tap.level)} >{tap.level}/2500</div> </div></td>
+                        {/* <td><div className="capacity"><div className={checkifLow(tap.level)} >{tap.level}/2500</div> </div></td> */}
+                        <td><div className="capacity"><div className={checkifLow(tap.level)} ></div> </div></td>
                     </div>
               </tr>
             )
