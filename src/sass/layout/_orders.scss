@@ -14,8 +14,10 @@
 
 .serving-component,
 .queue-component {
+  position: relative;
   min-width: 210px;
   min-height: 210px;
+  border: solid 2px $black;
   h1 {
     font-family: "Dela-Gothic-One-Regular", sans-serif;
     font-size: 1rem;
@@ -37,6 +39,15 @@
   h1:first-child:before {
     content: "ORDER #";
   }
+
+  .listOrder {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .listOrder > li {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .serving-component > .heading-container {
@@ -51,23 +62,9 @@
   margin-bottom: 0.5rem;
 }
 
-.serving-component,
-.queue-component {
-  border: solid 2px $black;
-
-  .listOrder {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-  }
-  .listOrder > li {
-    margin-bottom: 0.5rem;
-  }
-}
-
-.serving-component {
+/* .serving-component {
   position: relative;
-}
+} */
 
 .ordertime-container {
   min-width: 210px;
@@ -111,64 +108,11 @@
     font-size: 1rem;
   }
 
-  /*   nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  .ordertime-container {
+    //min-width: 210px;
+    width: auto;
+    p {
+      text-align: center;
+    }
   }
-
-  nav > ol {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-  }
-
-  .intro-inspired {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: column-reverse;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  .mockup-inspired {
-    width: 80vw;
-    height: auto;
-    margin-top: 4vw;
-  }
-
-  .text-inspired {
-    text-align: center;
-  }
-
-  button {
-    align-self: center;
-    font-size: 2.3vw;
-    width: 30vw;
-    padding: 2.5vw;
-    margin-top: 1vw;
-  }
-
-  section.intro-inspired > div.text-inspired > h1 {
-    font-size: 2rem;
-  }
-
-  section.posters-wrapper > h1 {
-    font-size: 2rem;
-    text-align: center;
-    padding-bottom: 1rem;
-  }
-
-  .posters-gallery {
-    padding-bottom: 10rem;
-    padding-top: 2rem;
-    margin-top: 0;
-  } */
 }
