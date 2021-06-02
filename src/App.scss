@@ -1,98 +1,102 @@
-.App {
-  text-align: center;
-}
+@use "./sass/base";
+@use "./sass/components";
+@use "./sass/layout";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 // .orders-container-main{
 //   display: flex;
 //   flex-direction: column;
 // }
-.bartenders, .orders-serving{
+
+/* .bartenders,
+.orders-serving {
   padding: 1rem;
   background-color: lightgrey;
   margin: 1rem;
-}
-.bartenders-component, .orderServing-component{
+} */
+
+/* .orderServing-component {
   display: flex;
   justify-content: space-between;
-}
-.bartenders-component > div, .orderServing-component > div{
+} */
+
+/* .bartenders-component > div,
+.orderServing-component > div {
   background-color: white;
   padding: 1rem;
   margin: 1rem;
-}
-.bartenders-component > h2{
-  margin: 0;
- 
-}
+} */
 
-.capacity {
+/* .capacity {
   height: 30px;
   width: 200px;
   border: solid 2px black;
 }
-.capacity > .lowstock{
+.capacity > .lowstock {
   height: 100%;
   width: 23%;
   background-color: red;
 }
 
-.capacity > .mediumlowstock{
+.capacity > .mediumlowstock {
   height: 100%;
   width: 33%;
   background-color: orange;
 }
 
-.capacity > .mediumhighstock{
+.capacity > .mediumhighstock {
   height: 100%;
   width: 66%;
   background-color: lightgreen;
 }
-.capacity > .highstock{
+.capacity > .highstock {
   height: 100%;
   width: 100%;
   background-color: green;
 }
 
-.orders-container{
+.inventory-container {
+  display: flex;
+  justify-content: space-between;
+}
+.inventory-container > div {
+  padding: 1rem;
+  margin: 1rem auto;
+  background-color: lightcyan;
+  display: grid;
+}
+
+.inventory-container > div table {
+  margin: 1rem auto;
+  justify-content: center;
+}
+
+.storagestatus tr.lowstock {
+  background-color: red;
+} */
+
+/* .orders-container {
   display: flex;
   border: 1px solid black;
   flex-wrap: wrap;
 }
 .orders-container > div {
-  background-color:  lightblue;
+  background-color: lightblue;
   padding: 1rem;
   margin: 1rem;
-
-}
-header{
+} */
+/* header {
   display: flex;
   justify-content: space-around;
-}
+} */
 
-.inventory-container{
-  display: flex;
-  justify-content: space-between;
-}
-.inventory-container > div{
-  padding: 1rem;
-  margin: 1rem auto;
- background-color: lightcyan;
- display: grid;
-}
+/* .App {
+  text-align: center;
+} */
 
-.inventory-container > div table{
-  margin: 1rem auto;
-  justify-content: center;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
-
-.storagestatus tr.lowstock{
-  background-color: red;
-}
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

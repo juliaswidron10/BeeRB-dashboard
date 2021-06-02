@@ -8,29 +8,48 @@ class Storage extends React.Component {
     }
 }
     render(){
-        const checkifLow = (taplevel) => {
+/*         const checkifLow = (taplevel) => {
             if(taplevel <= 2 ){
                 return 'lowstock'
             } else{
                 return 'highstock'
             }
+        } */
+
+        const checkifLow = (taplevel) => {
+            if(taplevel < 3 ){
+                return 'lowstock'
+            }else if(taplevel > 3 && taplevel < 5){
+                return 'mediumlowstock'
+            } else if(taplevel > 5 && taplevel < 8){
+                return 'mediumhighstock'
+            }else{
+                return 'highstock'
+            }
         }
+
         return(
             <div>
-              <h1>Current status of storage</h1>
+              <h1>Kegs storage</h1>
               <table className="storagestatus">
+              <div className="storagestatus-heading">
                  <thead>
                  <tr>
-                      <th>Name of the beer</th>
-                      <th>storage</th>
+                      <th>Beer name</th>
+                      <th>Keg Amount</th>
                   </tr>
                   </thead>
+                </div>
                   <tbody>
                   {this.props.storage.map(storage => {
             return(
                 <tr key={storage.name} className={checkifLow(storage.amount)}>
-                    <td>{storage.name}</td>
-                    <td>{storage.amount}</td> 
+                    <div className="storagestatus-content">
+                        <td>{storage.name}</td>
+                        <div className="amount-circle">
+                            <td>{storage.amount}</td>
+                        </div>
+                    </div>
               </tr>
             )
            

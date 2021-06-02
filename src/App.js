@@ -58,8 +58,10 @@ render(){
     <Router>
      <div className="App">
       <header>
-        <h1>BeeRB</h1>
-        <p className="timenow">{cleanUpTimeStamp(this.state.timestamp) }</p>
+        <div className="header-wrapper">
+          <h1>FooBar</h1>
+          <p className="timenow">{cleanUpTimeStamp(this.state.timestamp) }</p>
+        </div>
         <nav>
           <ul>
             <li>
@@ -80,12 +82,12 @@ render(){
           <Route path="/orders">
             <div className="orders-container-main" >
               <div className="orders-serving">
-                <h1>Orders serving</h1>
+                <h1>Orders being served</h1>
                 <OrdersServing currenttime={cleanUpTimeStamp(this.state.timestamp)} bartenders={this.state.bartenders} serving={this.state.serving}/>
               </div>
 
-              <div className="orders">
-                <h1>Queue</h1>
+              <div className="orders-queue">
+                <h1>Orders in the queue</h1>
                 <Orders orders={this.state.queue}/>
               </div>
             </div>
@@ -93,18 +95,29 @@ render(){
 
           <Route path="/bartenders">
           <div className="bartenders">
-                <h1>Bartenders working today</h1>
-                <Bartenders bartenders={this.state.bartenders} />
+                <h1>Bartenders current situation</h1>
+                <div className="bartenders-container">
+                  <div className="bartenders-headings">
+                  <h2>Bartender name</h2>
+                    <h2>Status</h2>
+                    <h2>Status detail</h2>
+                    <h2>Serving order</h2>
+                    <h2>Using tap</h2>
+                  </div>
+                  <div className="bartenders-content">
+                    <Bartenders bartenders={this.state.bartenders} />
+                  </div>
+                </div>
               </div>
           </Route>
 
           <Route path="/inventory">
             <div className="inventory-container">
+            <div className="tapssituation"> 
+                <Taps taps={this.state.taps}/>
+              </div>
               <div className="storagesituation">
                 <Storage storage={this.state.storage} />
-              </div>
-              <div className="tapssituatuion"> 
-                <Taps taps={this.state.taps}/>
               </div>
             </div>
           </Route>

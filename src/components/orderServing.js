@@ -26,7 +26,7 @@ class OrderServing extends React.Component {
                 }
             }  
             for (let prop in counts){
-                let orderItem = `${prop} ${counts[prop]}`;
+                let orderItem = `${prop} x${counts[prop]}`;
                 console.log(orderItem)
                 finOrder.push(orderItem)
                 console.log(finOrder);
@@ -56,19 +56,22 @@ class OrderServing extends React.Component {
 
         return(
             <div className="serving-component">
-                <h2>{this.props.id}</h2>
-                <h2>Order Placed</h2>
-                <p>{cleanUpTimeStamp(this.props.startTime) }</p>
-                <h2>Ordered Items</h2>
+                <div className="heading-container">
+                    <h1>{this.props.id}</h1>
+                </div>
+                {/* <h2>Ordered Items</h2> */}
                 <ul className="listOrder" >
                     {finOrder.map( order => {
                         return(
                             <li>{ order }</li>
                         )
                     })
-
                     }
                 </ul>
+                <div className="ordertime-container">
+                     <p><span>Order placed at: </span>{cleanUpTimeStamp(this.props.startTime) }</p>
+                </div>
+
             </div>
         )
     }

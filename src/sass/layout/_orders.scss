@@ -1,0 +1,118 @@
+@use "../base/vars" as *;
+
+.orders-serving,
+.orders-queue {
+  padding: 0.2rem 0rem;
+  margin: 1.5rem;
+  border-top: solid 2px $black;
+
+  h1 {
+    font-family: "Courier-Prime-Regular";
+    font-size: 1.5rem;
+  }
+}
+
+.serving-component,
+.queue-component {
+  position: relative;
+  min-width: 210px;
+  min-height: 210px;
+  border: solid 2px $black;
+  h1 {
+    font-family: "Dela-Gothic-One-Regular", sans-serif;
+    font-size: 1rem;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "Courier-Prime-Regular";
+    font-size: 1rem;
+  }
+
+  p,
+  li {
+    font-family: "Courier-Prime-Regular";
+    font-size: 1rem;
+  }
+
+  h1:first-child:before {
+    content: "ORDER #";
+  }
+
+  .listOrder {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .listOrder > li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.serving-component > .heading-container {
+  background-color: $green;
+  padding: 0.4rem 0.5rem 0.05rem 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.queue-component > .heading-container {
+  background-color: $orange;
+  padding: 0.4rem 0.5rem 0.05rem 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* .serving-component {
+  position: relative;
+} */
+
+.ordertime-container {
+  min-width: 210px;
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  background-color: $light-grey;
+  padding: 0rem;
+
+  p {
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+.orderServing-component,
+.orders-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+@media only screen and (max-width: 500px) {
+  .orderServing-component,
+  .orders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    //justify-content: flex-start;
+  }
+
+  .orders-serving > h1 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .orders-queue > h1 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .ordertime-container {
+    //min-width: 210px;
+    width: auto;
+    p {
+      text-align: center;
+    }
+  }
+}

@@ -23,27 +23,33 @@ class Taps extends React.Component {
         }
         return(
             <div>
-              <h1>Current status of Taps</h1>
+              <h1>Taps status</h1>
               <table className="tapsstatus">
+                  <div className="tapstatus-heading">
                   <thead>
                   <tr>
-                      <th>Name of the beer</th>
-                      <th>Tap Number</th>
-                      <th>Capacity</th>
-                      <th>Level</th>
+                      <th>Beer name</th>
+                      <th>Tap number</th>
                       <th>In use</th>
+                      {/* <th>Capacity</th> */}
+                      <th>Tap level</th>
+                      
                   </tr>
                   </thead>
+                  </div>
                   <tbody>
                   {this.props.taps.map(tap => {
                   
             return(
                 <tr  key={tap.id} className={checkifLow(tap.level)}>
-                    <td>{tap.beer}</td>
-                    <td>{tap.id}</td>
-                    <td>{tap.capacity}</td> 
-                    <td><div className="capacity"><div className={checkifLow(tap.level)} >{tap.level}</div> </div></td>
-                    <td>{tap.inUse ? 'yes' : 'no'}</td>
+                    <div className="tapsstatus-content">
+                        <td>{tap.beer}</td>
+                        <td>{tap.id}</td>
+                        <td>{tap.inUse ? 'yes' : 'no'}</td>
+                        {/* <td>{tap.capacity}</td>  */}
+                        {/* <td><div className="capacity"><div className={checkifLow(tap.level)} >{tap.level}/2500</div> </div></td> */}
+                        <td><div className="capacity"><div className={checkifLow(tap.level)} ></div> </div></td>
+                    </div>
               </tr>
             )
             

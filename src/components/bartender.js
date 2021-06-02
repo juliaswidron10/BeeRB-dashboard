@@ -12,25 +12,45 @@ class Bartender extends React.Component {
     //     }
     // }
     render(){
+
+/*         const checkIfNoTap = (usingTap) => {
+            if(usingTap == null){
+                return '-'
+            } else{
+                return 'usingTap'
+            }
+        } */
+
         return(
             <div>
-                <h1>{this.props.name}</h1>
-                <div>
-                    <h2>Serving Customer</h2>
-                    <p>{this.props.servingCustomer}</p>
+                <div className="bartender-icon-container">
+                    <div className="bartender-icon"></div>
+                </div>
 
-                    <h2>Status</h2>
-                    <p>{this.props.status}</p>
+                <div className="border"></div>
 
-                    <h2>Status Details</h2>
-                    <p>{this.props.statusDetail}</p>
+                <p>{this.props.name}</p>
 
+                <div className="border"></div>
 
-                    <h2>Using Tab</h2>
-                    <p>{this.props.usingTap}</p>
-               </div> 
-        
+                <p>{this.props.status}</p>
+
+                <div className="border"></div>
+
+                <p>{this.props.statusDetail}</p>
+
+                <div className="border"></div>
+                
+                <p>#{this.props.servingCustomer}</p>
+                
+                <div className="border"></div>
+
+                {/* <div className={checkIfNoTap(this.props.usingTap)} >{this.props.usingTap}</div> */}
+                <p>#{this.props.usingTap}</p>  
+
+                <div className="border"></div>
             </div>
+
         )
     }
 }
