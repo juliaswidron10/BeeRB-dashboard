@@ -1,6 +1,7 @@
 import React from 'react';
 let finOrder = [];
 
+
 class OrderServing extends React.Component {
     constructor(props) {
         super(props);
@@ -47,7 +48,7 @@ class OrderServing extends React.Component {
             return dateToDisplay
         
           }
-          
+
         cleanUpOrders(this.props.order);
 
 
