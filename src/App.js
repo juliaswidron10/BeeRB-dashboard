@@ -23,7 +23,7 @@ class App extends React.Component {
   componentDidMount() {
     // Simple GET request using fetch
     const fetchData = () => {
-      fetch('https://beerb-exam.herokuapp.com/')
+      fetch('https://beerb.herokuapp.com/')
       .then(response => response.json())
       .then(data => handleData(data));
     }
