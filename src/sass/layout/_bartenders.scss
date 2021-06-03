@@ -39,6 +39,15 @@ div.bartenders-container {
     padding: 0;
   }
 }
+.working{
+  color: $green !important
+}
+.ready{
+  color:$orange !important
+}
+.serving{
+  color: $red !important
+}
 
 .bartenders-component > div {
   display: grid;

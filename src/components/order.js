@@ -6,7 +6,8 @@ class Order extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            finalOrder: []
+            finalOrder: [],
+            key: props.id
             }
         }
 
@@ -41,14 +42,14 @@ class Order extends React.Component {
         
         //   }
         return(
-            <div div className="queue-component">
+            <div className="queue-component">
                 <div className="heading-container">
                     <h1> {this.props.id} </h1>
                 </div>
                 <ul className="listOrder" >
                     {finOrder.map( order => {
                         return(
-                            <li>{ order }</li>
+                            <li key={order}>{ order }</li>
                         )
                     })
 
