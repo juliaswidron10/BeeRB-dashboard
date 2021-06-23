@@ -39,6 +39,17 @@ class OrderServing extends React.Component {
             return dateToDisplay
         
           }
+        const getBartender = (id) => {
+            console.log(id)
+            let nametoReturn;
+            this.props.bartenders.map(bartender => {
+                if(bartender.servingCustomer === id){
+                    nametoReturn = bartender.name
+                }
+                return nametoReturn;
+            })
+            return nametoReturn;
+        }
 
         cleanUpOrders(this.props.order);
 
@@ -48,7 +59,10 @@ class OrderServing extends React.Component {
             <div className="serving-component">
                 <div className="heading-container">
                     <h1>{this.props.id}</h1>
+                    <p className="servingBartender">Serving: <strong>{getBartender(this.props.id)}</strong></p>
+                        
                 </div>
+                
                 <ul className="listOrder" >
                     {finOrder.map( order => {
                         return(
@@ -57,10 +71,11 @@ class OrderServing extends React.Component {
                     })
                     }
                 </ul>
+                
                 <div className="ordertime-container">
                      <p><span>Order placed at: </span>{cleanUpTimeStamp(this.props.startTime) }</p>
+                     
                 </div>
-
             </div>
         )
     }

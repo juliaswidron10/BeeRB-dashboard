@@ -55,6 +55,7 @@ class Order extends React.Component {
 
                     }
                 </ul>
+               
             </div>
         )
     }

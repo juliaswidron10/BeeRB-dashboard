@@ -13,7 +13,7 @@ class OrdersServing extends React.Component {
             <div className="orderServing-component">
                 {this.props.serving.map(order => {
             return(
-                <OrderServing {... order} key={order.id} />
+                <OrderServing {... order} key={order.id}  bartenders={this.props.bartenders} />
             )
            
         })

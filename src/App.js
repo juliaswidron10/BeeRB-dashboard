@@ -75,7 +75,6 @@ render(){
       </header>
         
         <Switch>
-
           <Route path="/orders">
             <div className="orders-container-main" >
               <div className="orders-serving">
@@ -118,17 +117,9 @@ render(){
               </div>
             </div>
           </Route>
-
-          
+  
         </Switch>
 
-      
-     
-     
-
-
-    
-     
     </div>
     </Router>
     
